@@ -5,7 +5,100 @@ html {
 *, *::after, *::before {
   box-sizing: inherit;
 }
+
 .wrapper {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: antiquewhite;
+}
+
+h1{
+  color: black;
+}
+
+.content {
+  padding: 0;
+  height: 0;
+  transition: opacity .8s;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  border: none;
+  width: 100%;
+  height: 45px;
+  font-style: normal;
+  border-top: 2px solid gray;
+  font-size: 20px;
+  font-weight: 600;
+  color: blue;
+  line-height: 18px;
+  text-align: left;
+  background-color: antiquewhite;
+}
+
+input {
+  display: none;
+}
+
+form:hover > label{
+  cursor: pointer;
+  color: black;
+}
+
+input:checked > label::after{
+  content: "\2573";
+}
+
+label:after {
+  content: '\02795';
+  font-size: 13px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+label:hover::after {
+  content: "\2573";
+}
+
+label:hover + .content {
+  padding: 20px;
+  height: 100%;
+  cursor: pointer;
+  opacity: 1;
+  overflow: visible;
+}
+
+input:checked + .content{
+  padding: 20px;
+  height: 100%;
+  cursor: pointer;
+  opacity: 1;
+  overflow: visible;
+}
+
+input:checked + label {
+  color: black;
+}
+
+img {
+  height: 200px;
+  width: 200px;
 }
