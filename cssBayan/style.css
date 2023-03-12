@@ -7,7 +7,7 @@ html {
 }
 
 .wrapper {
-  width: 1200px;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -101,4 +101,22 @@ input:checked + label {
 img {
   height: 200px;
   width: 200px;
+}
+
+@media screen and (max-width: 1180px) {
+  body, label {
+    font-size: 16px;
+  }
+  label:after {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  body, label {
+    font-size: 12px;
+  }
+  label:after {
+    font-size: 5px;
+  }
 }
